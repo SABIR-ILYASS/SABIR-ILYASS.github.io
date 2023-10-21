@@ -16,6 +16,7 @@ body{
 
 /* ---- pre loading ---- */
 section{
+    position: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +24,7 @@ section{
     width: 100vw;
     background: #080808;
     animation: animateBg 10s linear infinite;
-    z-index: 1000;
+    z-index: 9000;
 }
 
 @keyframes animateBg{
@@ -38,14 +39,14 @@ section{
 
 }
 
-section #pre-loader{
+section .pre-loader{
     position: relative;
     width: 120px;
     height: 120px;
 }
 
 
-section #pre-loader span{
+section .pre-loader span{
     position: absolute;
     top: 0;
     left: 0;
@@ -54,7 +55,7 @@ section #pre-loader span{
     transform: rotate(calc(18deg * var(--i)));
 }
 
-section #pre-loader span::before{
+section .pre-loader span::before{
     content: '';
     position: absolute;
     top: 0;
@@ -82,9 +83,7 @@ section #pre-loader span::before{
     }
 }
 
-section #name{
-    margin-top: 75%;
-}
+
 /* ----- header ----- */
 #header{
     width: 100%;

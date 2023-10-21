@@ -11,8 +11,8 @@
 
 </head>
 <body>
-    <section>
-        <div id="pre-loader">
+    <section class ="loader">
+        <div class="pre-loader">
             <span style="--i:1;"></span>
             <span style="--i:2;"></span>
             <span style="--i:3;"></span>
@@ -34,12 +34,7 @@
             <span style="--i:19;"></span>
             <span style="--i:20;"></span>
         </div>
-        <!---
-        <div id="Name">
-            <h1>SABIR Ilyass</h1>
-        </div>
-        --->
-        
+
     </section>
     
 
@@ -423,10 +418,11 @@
     </footer>
 
     <script>
-        var loader = document.getElementById(pre-loader);
-        window.addEventListener("load", function(){
-            loader.style.display = "none";
-        })
+        window.onload = function(){
+        //hide the preloader
+        document.querySelector(".loader").style.display = "none";
+    }
+
     </script>
 
     <script>
