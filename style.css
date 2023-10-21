@@ -20,9 +20,10 @@ section{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    width: 100vw;
     background: #080808;
     animation: animateBg 10s linear infinite;
-    display: none;
+    z-index: 1000;
 }
 
 @keyframes animateBg{
