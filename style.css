@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@300&family=Zeyada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Caveat:wght@500&family=Playpen+Sans:wght@300&family=Zeyada&display=swap');
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Playpen Sans', cursive;
     box-sizing: border-box;
 }
 
@@ -10,7 +13,7 @@ html{
 }
 
 body{
-    background: #080808;
+    background: #212129;
     color: #fff;
 }
 
@@ -106,18 +109,15 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
-.logo{
-    width: 200px;
-    margin-top: 20px;
+nav ul{
+    text-align: center;
 }
-
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 nav ul li a{
@@ -132,7 +132,7 @@ nav ul li a::after{
     content: "";
     width: 0;
     height: 3px;
-    background: #172A46;
+    background: #fff;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -142,6 +142,50 @@ nav ul li a::after{
 nav ul li a:hover::after{
     width: 100%;
 }
+
+
+.logo{
+    height: 60px;
+    margin-top: 20px;
+}
+
+.logo img{
+    height: 150px;
+    animation: animate 4s ease-in-out infinite;
+}
+
+.logo h1{
+    /*position: absolute;*/
+    margin: 0;
+    /*font-size: 1em;*/
+    font-weight: 900;
+    color: #fff;
+    /*z-index: 1;*/
+    overflow: hidden;
+    letter-spacing: 0.2em;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+    line-height: 0.7em;
+    outline: none;
+    animation: animate 10s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        color: #080808;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff;
+        text-shadow: 0 0 10px #517FE7,
+        0 0 20px #517FE7,
+        0 0 40px #517FE7,
+        0 0 80px #517FE7,
+        0 0 160px #517FE7;
+    }
+}
+
+
+
 
 .header_text{
     margin-top: 20%;
@@ -153,13 +197,18 @@ nav ul li a:hover::after{
 }
 
 .header_text h1 span{
-    color: #517FE7;
+    color: #A04C59;
+    font-family: 'Caveat', cursive;
+    font-family: 'Playpen Sans', cursive;
+    font-family: 'Zeyada', cursive;
+    font-family: 'Allura', cursive;
+    font-size: 80px;
 
 }
 
 .header_text h2{
     font-size: 40px;
-    color: #ff004f;
+    color: #175673;
     margin-top: 5px;
 }
 
@@ -179,10 +228,123 @@ nav ul li a:hover::after{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+   align-items: center;
+
 }
 
 .r .c1{
     flex-basis: 35%;
+}
+
+.scan{
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scan .face{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: url(images/001-r.png);
+    background-size: 300px;
+}
+
+.scan .face::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url(images/002-r.png);
+    background-size: 300px;
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate
+{
+    0%, 100%
+    {
+       height: 0%; 
+    }
+    50%{
+        height: 100%;
+    }
+}
+
+.scan .face::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: #3fefef;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 20px #3fefef) drop-shadow(0 0 20px #3fefef);
+    animation: animation-line 4s ease-in-out infinite;
+}
+
+@keyframes animation-line{
+    0%, 100%{
+        top: 0%;
+    }
+    50%{
+        top: 100%;
+    }
+}
+
+.scan .face .dots{
+    position: absolute;
+    inset: 0;
+}
+
+.scan .face .dots::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url(images/003-r.png);
+    background-size: 300px;
+    animation: face_lines 4s ease-in-out infinite;
+}
+
+@keyframes face_lines
+{
+    0%{
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
+}
+
+
+.scan .face .dots::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: url(images/004-r.png);
+    background-size: 300px;
+    animation: face_points 4s ease-in-out infinite;
+}
+
+
+@keyframes face_points
+{
+    0%, 25%, 100%{
+        height: 0%;
+    }
+    50%{
+        height: 100%;
+    }
 }
 
 .r .c1 img{
@@ -191,7 +353,8 @@ nav ul li a:hover::after{
 }
 
 .r .c2{
-   flex-basis: 60%; 
+   flex-basis: 60%;
+   text-align: center; 
 }
 
 .title{
