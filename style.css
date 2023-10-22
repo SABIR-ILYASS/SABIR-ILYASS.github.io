@@ -166,24 +166,7 @@ nav ul li a:hover::after{
     -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
     line-height: 0.7em;
     outline: none;
-    animation: animate 10s linear infinite;
 }
-
-@keyframes animate{
-    0%{
-        color: #080808;
-        text-shadow: none;
-    }
-    100%{
-        color: #fff;
-        text-shadow: 0 0 10px #517FE7,
-        0 0 20px #517FE7,
-        0 0 40px #517FE7,
-        0 0 80px #517FE7,
-        0 0 160px #517FE7;
-    }
-}
-
 
 
 
@@ -315,7 +298,7 @@ nav ul li a:hover::after{
 
 @keyframes face_lines
 {
-    0%{
+    0%, 100%{
         height: 0%;
     }
     50%{
@@ -468,7 +451,7 @@ nav ul li a:hover::after{
 }
 
 .Volunteer-list div{
-    background: #262626;
+    background: #175673;
     padding: 40px;
     font-size: 13px;
     font-weight: 300;
@@ -478,7 +461,8 @@ nav ul li a:hover::after{
 
 .Volunteer-list div i{
     font-size: 50px;
-    margin-bottom: 30px;   
+    margin-bottom: 30px;
+    color: #798D97;   
 }
 
 .Volunteer-list div h2{
@@ -491,108 +475,17 @@ nav ul li a:hover::after{
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 15px;
+    color: #798D97;   
 }
 
-.Volunteer-list div a{
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-    margin-top: 20px;
-    display: inline-block;
+.Volunteer-list div p{
+    font-size: 15px;
+
 }
 
 .Volunteer-list div:hover{
-    background: #172A46;
+    background: #23708A;
     transform: translateY((-10px));
-}
-
-/* ---- portfolio ---------*/
-#portfolio{
-    padding: 5px 0;
-}
-
-.work-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
-    margin-top: 50px;
-}
-
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-}
-
-.work img{
-    width: 100%;
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), #172A46);
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 4px;
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-
-}
-
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.layer a{
-    margin-top: 20px;
-    color: #172A46;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: center;
-}
-
-.work:hover img{
-    transform: scale(1.1);
-}
-
-
-.work:hover .layer{
-    height: 100%;
-}
-
-.btn{
-    display: block;
-    margin: 50px auto;
-    width: fit-content;
-    border: 1px solid #ff004f;
-    padding: 14px 50px;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #fff;
-    transition: background 0.5s;
-}
-
-.btn:hover{
-    background: #ff004f;
-
 }
 
 /* ---- centificates --- */
@@ -682,16 +575,17 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #175673;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
     color: #fff;
     transition: background 0.5s;
+    background: #175673;
 }
 
 .btn:hover{
-    background: #ff004f;
+    background: #23708A;
 }
 
 /* ----888--- */
@@ -766,7 +660,7 @@ nav ul li a:hover::after{
 }
 
 .contact-left p i{
-    color: #ff004f;
+    color: #23708A;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -785,16 +679,14 @@ nav ul li a:hover::after{
 }
 
 .social-icons a:hover{
-    color: #ff004f;
+    color: #23708A;
     transform: translateY(-5px);
 
 }
 
 
-.btn.btn2{
-    display: inline-block;
-    background: #ff004f;
-}
+
+
 
 .contact-right form{
     width: 100%;
@@ -838,17 +730,21 @@ form .btn2{
 /* ---------- CSS for responsive ---------- */
 
 @media only screen and (max-width: 600px){
+    body{
+        text-align: center;
+        background: 212129;
+    }
     #header{
         background-image: url(images/phone-background.png);
     }
 
     .header_text{
-        margin-top: 80%;
+        margin-top: 50%;
         font-size: 16px;
     }
 
     .header_text h1{
-        font-size: 30px;
+        font-size: 40px;
     }
     
     nav .fa-solid{
@@ -858,23 +754,24 @@ form .btn2{
 
     .header_text h1 span{
         color: #172A46;
+        font-size: 60px;
     }
     
     .header_text h2{
-        color: #6EC72D;
+        color: #23708A;
     }
     
     .header_text p{
-        color:#ff004f;
+        color:#fff;
     }
 
     nav ul{
-        background: #ff004f;
+        background: #172A46;
         position: fixed;
         top: 0;
         right: -200px;
         width: 200px;
-        height: 100vh;
+        height: 60vh;
         padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
@@ -900,16 +797,20 @@ form .btn2{
 
     .c1, .c2{
         flex-basis: 100%;
-        text-align: center;
     }
 
     .r{
         text-align: center;
     }
 
+    .c1{
+        margin-left: 40px;
+    }
 
     .c2{
         font-size: 14px;
+        margin-left: 70px;
+        margin-right: 0;
     }
 
     .school-logo{
