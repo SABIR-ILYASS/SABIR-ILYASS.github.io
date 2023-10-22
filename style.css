@@ -839,3 +839,53 @@ form .btn2{
     }
 
 }
+
+.languages{
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.languages .lang{
+    position: relative;
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(rgb(23, 86, 115), transparent);
+    border: 2px solid rgb(23, 86, 115, 1);
+    display: flex;
+    transition: 0.5s;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    flex: 1 0 calc(12.5% - 20px); 
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.languages .lang.pair{
+    margin-top: 60px;
+}
+
+.languages .lang h2{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgb(23, 86, 115, 0.05);
+    text-align: center;
+}
+
+.languages .lang svg, img{
+    font-size: 4em;
+    height: 70px;
+}
+
+.languages .lang:hover{
+    position: relative;
+    height: 130px;
+}
