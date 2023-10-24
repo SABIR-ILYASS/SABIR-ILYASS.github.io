@@ -397,46 +397,7 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/* ---- education */
-.school{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-    align-items: center;
-}
 
-.school-logo{
-    flex-basis: 25%;
-    text-align: center;
-}
-
-.school-logo img{
-    height: 100%;
-}
-
-.school-desc{
-    flex-basis: 70%;
-}
-
-.section-heading{
-    color: #ff004f;
-    font-size: 20px;
-}
-
-.section-subheading{
-    color: #517FE7;
-    font-size: 18px;
-}
-
-.date-range{
-    color: #6EC72D;
-    font-size: 18px;
-}
-
-.description{
-    font-size: 16px;
-}
 /* ------- Volunteer  ---------- */
 #Volunteer {
     padding: 30px 0;
@@ -890,7 +851,6 @@ form .btn2{
     position: relative;
     height: 130px;
 }
-<<<<<<< HEAD
 
 /* ----------- Experiences -------*/
 .experience{
@@ -1076,6 +1036,54 @@ form .btn2{
 }
 */
 
+/* ---------- skills ---------- */
+.skills{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 
-=======
->>>>>>> 490a94aa4030ae7ccc2ff4de79f982d5eb9a6c55
+.skl{
+    position: relative;
+    width: 200px;
+    height: 240px;
+    background: linear-gradient(rgb(23, 86, 115), transparent);
+    border: 1px solid rgba(23, 86, 115, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    transform: rotate(calc(var(--r) * 1deg));
+    backdrop-filter: blur(10px);
+}
+
+.skl::before{
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+    background: rgba(23, 86, 115, 0.05);
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    display: flex;
+    text-align: center;
+
+}
+
+.skl img{
+    width: 60%;
+    height: 45%;
+    margin-bottom: 40px;
+}
+
+.skills:hover .skl{
+    transform: rotate(0deg);
+    margin: 0 10px;
+    color: #fff;
+}
