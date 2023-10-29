@@ -622,8 +622,12 @@ nav ul li a:hover::after{
     flex-basis: 60%;
 }
 
+.contact-left h1{
+    margin-top: -150px;
+}
+
 .contact-left p{
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
 .contact-left p i{
@@ -1304,5 +1308,4 @@ form .btn2{
     text-decoration: none;
     border-radius: 5px;
 }
-
 
