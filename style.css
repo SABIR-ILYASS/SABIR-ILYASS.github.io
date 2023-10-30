@@ -1371,6 +1371,117 @@ form .btn2{
         left: -55px;
     }
 
+    .skills{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .skl{
+        width: 33%;
+        text-align: center; 
+        transform: rotate(calc(var(--r) * 1deg));
+        margin: 0 -20px;
+
+    }
+
+    /* ---------- skills ---------- */
+    /*.skl{
+        position: relative;
+        width: 200px;
+        height: 240px;
+        background: linear-gradient(rgb(23, 86, 115), transparent);
+        border: 1px solid rgba(23, 86, 115, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        border-radius: 10px;
+        margin: 0 -45px;
+        backdrop-filter: blur(10px);
+        margin-bottom: 20px;
+    }*/
+    .skl::before{
+        content: attr(data-text);
+        position: absolute;
+        bottom: 0;
+        height: 150px;
+        width: 100%;
+        background: rgba(23, 86, 115, 0.05);
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        display: flex;
+        text-align: center;
+
+    }
+
+    .skl img{
+        width: 60%;
+        height: 45%;
+        margin-bottom: 40px;
+    }
+
+    .skills:hover .skl{
+        transform: rotate(0deg);
+        margin: 0 10px;
+        color: #fff;
+    }
+
+    /* ---- education ---- */
+    .education{
+        padding: 10px 50px;
+        position: relative;
+        display: block;
+        margin-bottom: 120px;
+    }
+
+
+    .edu{
+        margin-top: 120px;
+        width: 100%;
+    }
+
+
+
+    .edu img{
+        position: absolute;
+        top: -110px;
+        right: 30%;
+    }
+
+
+    .edu::after{
+        content: "";
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        background-color: #172A46;
+        left: 0%;
+        top: -60px;
+        z-index: -1;
+    }
+
+    .education::after{
+        display: none;
+    }
+
+    .edu h2{
+        font-weight: 600;
+        color: #23708A;
+        /*margin-bottom: 10px;*/
+    }
+
+    .edu h3{
+        /*display: inline-block;*/
+        color: #717171;
+    }
+    /*
+    .edu p{
+        margin-top: 10px;*
+    }
+    */
+
+
 
 
 }
