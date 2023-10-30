@@ -760,29 +760,59 @@
     }
 
     </script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Function to animate elements when they come into view
-        function animateOnScroll() {
-            const aboutSection = $('#about');
-            const windowHeight = $(window).height();
-            const scroll = $(window).scrollTop();
 
-            if (scroll > aboutSection.offset().top - windowHeight + 100) {
-                aboutSection.addClass('animated');
-            }
+<script>
+    const experienceContainer = document.querySelector(".experience");
+    const leftScroll = document.getElementById("left-scroll");
+    const rightScroll = document.getElementById("right-scroll");
+
+    const scrollDistance = 300; // Adjust this value to control the scroll distance
+
+    let scrollPosition = 0;
+
+    leftScroll.addEventListener("click", () => {
+      scrollPosition -= scrollDistance;
+      if (scrollPosition < 0) {
+        scrollPosition = 0;
+      }
+      experienceContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    });
+
+    rightScroll.addEventListener("click", () => {
+      scrollPosition += scrollDistance;
+      if (scrollPosition > experienceContainer.scrollWidth - experienceContainer.clientWidth) {
+        scrollPosition = experienceContainer.scrollWidth - experienceContainer.clientWidth;
+      }
+      experienceContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
+    });
+  </script>
+  <script>
+        const element = document.querySelector('.lang');
+        function getRandomDelay(min, max) {
+            return Math.random() * (max - min) + min;
         }
 
-        // Call the animation function on page load and scroll
-        $(document).ready(function() {
-            animateOnScroll();
-        });
+        function applyRandomAnimationDelay(element) {
+            const minDelay = 1; 
+            const maxDelay = 14;
+            const randomDelay = getRandomDelay(minDelay, maxDelay);
+            element.style.animationDelay = `${randomDelay}s`;
+        }
 
-        $(window).scroll(function() {
-            animateOnScroll();
+        elements.forEach(applyRandomAnimationDelay);
+
+        // Reapply a new random delay to each element when the animation iteration ends
+        elements.forEach(element => {
+            element.addEventListener('animationiteration', () => {
+                applyRandomAnimationDelay(element);
+            });
         });
-    </script>
     
+    
+
+
+  </script>
+
 
     <script src="particles-config.js"></script>
     <script src="slides.js"></script>

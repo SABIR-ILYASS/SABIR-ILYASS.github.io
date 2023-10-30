@@ -698,119 +698,6 @@ form .btn2{
     display: block;
 }
 
-/* ---------- CSS for responsive ---------- */
-
-@media only screen and (max-width: 600px){
-    body{
-        text-align: center;
-        background: 212129;
-    }
-    #header{
-        background-image: url(images/phone-background.png);
-    }
-
-    .header_text{
-        margin-top: 50%;
-        font-size: 16px;
-    }
-
-    .header_text h1{
-        font-size: 40px;
-    }
-    
-    nav .fa-solid{
-        display: block;
-        font-size: 25px;
-    }
-
-    .header_text h1 span{
-        color: #172A46;
-        font-size: 60px;
-    }
-    
-    .header_text h2{
-        color: #23708A;
-    }
-    
-    .header_text p{
-        color:#fff;
-    }
-
-    nav ul{
-        background: #172A46;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 60vh;
-        padding-top: 50px;
-        z-index: 2;
-        transition: right 0.5s;
-
-    }
-
-    nav ul li{
-        display: block;
-        margin: 25px;
-    }
-
-    nav ul .fa-solid{
-        position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
-
-    }
-
-    .title{
-        font-size: 40px;
-    }
-
-    .c1, .c2{
-        flex-basis: 100%;
-    }
-
-    .r{
-        text-align: center;
-    }
-
-    .c1{
-        margin-left: 40px;
-    }
-
-    .c2{
-        font-size: 14px;
-        margin-left: 70px;
-        margin-right: 0;
-    }
-
-    .school-logo{
-        flex-basis: 100%;
-    }
-
-    .school-desc{
-        flex-wrap: 100%;
-    }
-
-    .links{
-        font-size: 16px;
-        margin-right: 20px;
-    }
-
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-    }
-
-    .copyright{
-        font-size: 14px;
-    }
-
-    .certificates-container{
-        width: 95%; 
-    }
-
-}
-
 .languages{
     position: relative;
     display: flex;
@@ -824,6 +711,7 @@ form .btn2{
 .languages .lang{
     position: relative;
     width: 200px;
+    max-width: 40%;
     height: 120px;
     background: linear-gradient(rgb(23, 86, 115), transparent);
     border: 2px solid rgb(23, 86, 115, 1);
@@ -836,6 +724,17 @@ form .btn2{
     margin-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
+    animation: zooming 1s ease-in-out infinite;
+}
+
+@keyframes zooming {
+    0%, 100% {
+        transform: scale(0.9);
+      }
+    50% {
+        transform: scale(1.15);
+      }
+    
 }
 
 .languages .lang.pair{
@@ -849,6 +748,7 @@ form .btn2{
     height: 40px;
     background: rgb(23, 86, 115, 0.05);
     text-align: center;
+    font-size: 1em;
 }
 
 .languages .lang svg, img{
@@ -856,10 +756,6 @@ form .btn2{
     height: 70px;
 }
 
-.languages .lang:hover{
-    position: relative;
-    height: 130px;
-}
 
 /* ----------- Experiences -------*/
 .experience{
@@ -1309,3 +1205,172 @@ form .btn2{
     border-radius: 5px;
 }
 
+
+/* Styles for mobile */
+@media screen and (max-width: 767px) {
+    .proj {
+        display: none; /* Masque tous les éléments "proj" pour les écrans de largeur maximale de 767px */
+    }
+}
+
+/* ---------- CSS for responsive ---------- */
+
+@media only screen and (max-width: 600px){
+    body{
+        text-align: center;
+        background: 212129;
+    }
+    #header{
+        background-image: url(images/phone-background.png);
+    }
+
+    .header_text{
+        margin-top: 50%;
+        font-size: 16px;
+    }
+
+    .header_text h1{
+        font-size: 40px;
+    }
+    
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    .header_text h1 span{
+        color: #172A46;
+        font-size: 60px;
+    }
+    
+    .header_text h2{
+        color: #23708A;
+    }
+    
+    .header_text p{
+        color:#fff;
+    }
+
+    nav ul{
+        background: #172A46;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 60vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+
+    }
+
+    .title{
+        font-size: 40px;
+    }
+
+    .c1, .c2{
+        flex-basis: 100%;
+    }
+
+    .r{
+        text-align: center;
+    }
+
+    .c1{
+        margin-left: 40px;
+    }
+
+    .c2{
+        font-size: 14px;
+        margin-left: 70px;
+        margin-right: 0;
+    }
+
+    .school-logo{
+        flex-basis: 100%;
+    }
+
+    .school-desc{
+        flex-wrap: 100%;
+    }
+
+    .links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+
+    .copyright{
+        font-size: 14px;
+    }
+
+    .certificates-container{
+        width: 95%; 
+    }
+
+    .experience{
+        margin: 50px auto;
+    }
+
+    .experience::after{
+        left: 51px;
+    }
+    
+    .experience{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+
+    .Exp{
+        width: 100%;
+        font-size: 12px;
+        left: -10px;
+    }
+
+    .Exp h2{
+        font-size: 20px;
+    }
+
+    .Exp.right, .Exp.left{
+        left: 0;
+    }
+    
+    .Exp.left img, .Exp.right img{
+        left: -105px;
+    }
+
+    .Exp .left-arrow, .Exp .right-arrow{
+        border-right: 15px solid #172A46;
+        border-left: 0;
+        left: -15px;
+
+    }
+
+    .Exp.right{
+        left: -55px;
+    }
+
+    .Exp.Exp.right img{
+        left: -55px;
+    }
+
+
+
+}
