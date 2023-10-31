@@ -1017,7 +1017,7 @@ form .btn2{
 .projects .proj .proj-img{
     position: absolute;
     top: 20px;
-    left: 17px;
+    left: 30px;
     width: 260px;
     height: 200px;
     background: #212129;
@@ -1099,20 +1099,21 @@ form .btn2{
 
 /*interests */
 .my-pubs {
+    position: relative;
     padding: 40px 0;
     margin-top: 50px;
     display: flex;
-    justify-content: space-around; /* Ajouté pour répartir les éléments horizontalement */
-    flex-wrap: wrap; /* Ajouté pour que les éléments se répartissent sur plusieurs lignes si nécessaire */
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    align-items: center;
 }
 
 .my-pubs .pub-group {
     display: flex;
-    flex: 0 1 calc(45% - 20px); /* Utilisation de flex pour la largeur et ajustement pour les marges */
-    flex-direction: column; /* Pour empiler les éléments en colonne */
-    margin: 10px;
+    flex: 0 1 calc(45% - 20px); 
+    flex-direction: column; 
     background: #175673;
-    padding: 40px;
+    padding: 50px;
     font-size: 13px;
     font-weight: 300;
     border-radius: 10px;
@@ -1120,50 +1121,36 @@ form .btn2{
     height: 350px;
 }
 
-.my-pubs .pub-group .image-pub {
-    position: absolute;
-    width: 20%; 
-    height: 25%; 
-    background: #fff;
-    border-radius: 15px;
-    align-items: center;
-    margin-top: -120px;
-    margin-left: 60px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
 
-}
-
-.my-pubs .pub-group .image-pub img{
-    position: absolute;
-    top: 50%;
+.my-pubs .pub-group img{
+    position: relative;
+    top: -50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 100%;
+    transform: translate(-50%, 0%);
+    height: 60%;
     object-fit: cover;
+    border-radius: 1px;
 }
 
-.pub-group .contenu-pub{
-    margin-top: 90px;
-    text-align: center;
-    align-items: center;
+.my-pubs .pub-group .pub-group-desc{
+    margin-top: -25%;
+
 }
 
-.my-pubs .pub-group .contenu-pub h2{
+.my-pubs .pub-group .pub-group-desc h2{
     font-size: 18px;
-    color: #fff;
+    color: #3fefef;
+    margin-bottom: 20px;
 }
 
-.my-pubs .pub-group .contenu-pub p{
+.my-pubs .pub-group p{
     margin-top: 15px;
     font-size: 16px;
-    color: #fff;
 }
 
-.my-pubs .pub-group .contenu-pub a{
-    margin-top: 15px;
+.my-pubs .pub-group a{
     font-size: 14px;
-    position: relative;
+    position:absolute;
     display: inline-block;
     padding: 15px 15px;
     background: #23708A;
@@ -1172,7 +1159,8 @@ form .btn2{
     text-decoration: none;
     border-radius: 10px;
     box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
-    bottom: 10px;
+    margin-top: 19%;
+    margin-left: 12%;
 }
 
 /* books */
@@ -1187,20 +1175,34 @@ form .btn2{
 
 .my_books .book{
     position: relative;
-    width: 200px;
     height: 240px;
     background: linear-gradient(rgb(23, 86, 115), transparent);
     border: 1px solid rgba(23, 86, 115, 0.1);
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     border-radius: 10px;
     margin: 0 10px;
     backdrop-filter: blur(10px);
+    display: flex;
+    width: 30%;
+}
+
+
+.my_books .book h2{
+    font-size: 1.5em;
+    display: flex;
+    height: 200px;
+    align-items: center;
+    color: #fff5;
+
 }
 
 .my_books .book a{
-    position: relative;
-    margin-bottom: 120px;           
+    position: absolute;
+    bottom: 10px; 
+    text-align: center;
+    align-items: center;     
+    left: 110px;     
     display: inline-block;
     padding: 12px 25px;
     background: #23708A;
@@ -1212,7 +1214,7 @@ form .btn2{
 
 
 /* Styles for mobile */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 600px) {
     .proj {
         display: none; /* Masque tous les éléments "proj" pour les écrans de largeur maximale de 767px */
     }
@@ -1376,26 +1378,29 @@ form .btn2{
         left: -55px;
     }
 
+
+    /* ---------- skills ---------- */
+
     .skills{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
     }
     .skl{
-        width: 33%;
+        width: 40%;
         text-align: center; 
-        transform: rotate(calc(var(--r) * 1deg));
+        transform: rotate(calc(var(--x) * 1deg));
         margin: 0 -20px;
+        margin-bottom: 25px;
 
     }
 
-    /* ---------- skills ---------- */
 
     .skl::before{
         content: attr(data-text);
         position: absolute;
         bottom: 0;
-        height: 150px;
+        height: 100px;
         width: 100%;
         background: rgba(23, 86, 115, 0.05);
         justify-content: center;
@@ -1403,6 +1408,7 @@ form .btn2{
         color: #fff;
         display: flex;
         text-align: center;
+        font-size: 12px;
 
     }
 
@@ -1416,6 +1422,14 @@ form .btn2{
         transform: rotate(0deg);
         margin: 0 10px;
         color: #fff;
+        width: 25%;
+
+    }
+
+    .skills:hover img{
+        width: 50%;
+        height: 35%;
+        margin-bottom: 40px;
     }
 
     /* ---- education ---- */
@@ -1464,6 +1478,80 @@ form .btn2{
 
     .edu h3{
         color: #717171;
+    }
+
+    /* books */
+    .my_books{
+        margin-bottom: 50%;
+    }
+    .my_books .book{
+        width: 80%;
+        height: 100%;
+    }
+
+    .my_books .book a{
+        left: 30%;
+    }
+
+    .my_books .book h2{
+        margin-bottom: 20%;
+        font-size: 15px;
+    }
+
+    .my-pubs .pub-group{
+        margin-bottom: 100px;
+    }
+
+    .my-pubs .pub-group .pub-group-desc{
+        margin-top: -120px;
+    }
+
+    .my-pubs .pub-group .pub-group-desc h2{
+        font-size: 16px;
+    }
+    .my-pubs .pub-group .pub-group-desc p{
+        font-size: 12px;
+    }
+
+    .my-pubs .pub-group a{
+        margin-top: 65%;
+    }
+
+    .projects .proj{
+        width: 90%;
+    }
+
+    .projects .proj .proj-img {
+        width: 65%;
+        height: 42%;
+        left: 18%;
+    }
+
+    .projects .proj:hover .proj-img {
+        width: 75%;
+        height: 35%;
+        left: 14%;
+    }
+
+    .projects .proj:hover .proj-container
+    {
+        top: 50px;
+    }
+
+    .projects .proj .proj-container h2{
+        font-size: 0.8m;
+        font-weight: 250;
+    }
+    
+    .projects .proj .proj-container p{
+        font-size: 0.8em;
+        margin-top: 8px;
+    }
+    
+    
+    .projects .proj .proj-container a{
+        font-weight: 400;
+
     }
 
 

@@ -15,44 +15,46 @@ form.addEventListener('submit', e => {
     .catch(error => console.error('Error!', error.message))
 })
 
-// Get all the project elements with the class "proj"
 const projectElements = document.querySelectorAll('.proj');
-  
-// Initialize a variable to keep track of the current group of projects
 let currentGroup = 0;
-  
-// Function to display the current group of projects (3 at a time)
+
 function showCurrentGroup() {
     // Hide all project elements
     projectElements.forEach(project => {
         project.style.display = 'none';
     });
-        
-    // Display the current group of projects
-    for (let i of [currentGroup % projectElements.length, (currentGroup+1) % projectElements.length, (currentGroup+2) % projectElements.length]) {
-        projectElements[i].style.display = 'block';
 
+    // Determine the number of elements to display based on screen width
+    const screenWidth = window.innerWidth;
+    let elementsToShow = 3; // Default to showing 3 elements
+
+    if (screenWidth < 750) {
+        elementsToShow = 1; // If screen width is less than 750px, show only 1 element
+    }
+
+    // Display the current group of projects
+    for (let i = currentGroup; i < currentGroup + elementsToShow; i++) {
+        const index = i % projectElements.length;
+        projectElements[index].style.display = 'block';
     }
 }
-  
-// Function to show the next group of projects
+
 function showNextGroup() {
     currentGroup++;
     showCurrentGroup();
 }
-  
-// Function to show the previous group of projects
+
 function showPreviousGroup() {
     currentGroup--;
-    if (currentGroup < 0){
-        currentGroup = projectElements.length;
+    if (currentGroup < 0) {
+        currentGroup = projectElements.length - 1;
     }
     showCurrentGroup();
 }
-  
-// Display the initial group of projects
+
 showCurrentGroup();
-  
+
+
 var sidemeu = document.getElementById("sidemenu");
 
 function openmenu(){
