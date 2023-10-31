@@ -100,6 +100,11 @@ section .pre-loader span::before{
     padding: 10px 10%;
 }
 
+.container p{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
 nav .fa-solid{
     display: none;
 }
@@ -1385,21 +1390,7 @@ form .btn2{
     }
 
     /* ---------- skills ---------- */
-    /*.skl{
-        position: relative;
-        width: 200px;
-        height: 240px;
-        background: linear-gradient(rgb(23, 86, 115), transparent);
-        border: 1px solid rgba(23, 86, 115, 0.1);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.5s;
-        border-radius: 10px;
-        margin: 0 -45px;
-        backdrop-filter: blur(10px);
-        margin-bottom: 20px;
-    }*/
+
     .skl::before{
         content: attr(data-text);
         position: absolute;
@@ -1429,7 +1420,7 @@ form .btn2{
 
     /* ---- education ---- */
     .education{
-        padding: 10px 50px;
+        padding: 10px 10px;
         position: relative;
         display: block;
         margin-bottom: 120px;
@@ -1446,7 +1437,7 @@ form .btn2{
     .edu img{
         position: absolute;
         top: -110px;
-        right: 30%;
+        right: 35%;
     }
 
 
@@ -1466,20 +1457,15 @@ form .btn2{
     }
 
     .edu h2{
-        font-weight: 600;
+        font-weight: 400;
         color: #23708A;
         /*margin-bottom: 10px;*/
     }
 
     .edu h3{
-        /*display: inline-block;*/
         color: #717171;
     }
-    /*
-    .edu p{
-        margin-top: 10px;*
-    }
-    */
+
 
 
 
