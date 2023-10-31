@@ -708,23 +708,61 @@
                     </div>
                 </div>
             </div>
+            <p>Here is a non-exhaustive list of the articles I have written since 2018.</p>
             <div class="my_books">
                 <div class="book">
-                    <h1>math1lvkcxvj</h1>
-                    <a href="" target="_blank">Read more</a>
+                    <h2>The minimum of a multivate polynomial</h2>
+                    <a href="Books/The minimum of a multivate polynomial.pdf" target="_blank">Read more</a>
                 </div>
 
                 <div class="book">
-                    <h2>math2</h2>
-                    <a href="" target="_blank">Read more</a>
+                    <h2>Solution : X2023, Math A, MP.</h2>
+                    <a href="Books/x2023.pdf" target="_blank">Read more</a>
                 </div>
                 <div class="book">
-                    <h2>math3</h2>
-                    <a href="" target="_blank">Read more</a>
+                    <h2></h2>
+                    <a href="Books/solution.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/quantique.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/enspart1.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2>Generalization of the problem 1, IMO 2021, Day 1</h2>
+                    <a href="Books/IMO.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/inequa.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/inequality2.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/La distribution des puissances d'un nombre.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/mathematics olympiad.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2>La formule de Mertens</h2>
+                    <a href="Books/mertens_formula.pdf" target="_blank">Read more</a>
+                </div>
+                <div class="book">
+                    <h2></h2>
+                    <a href="Books/Olympiades_maths_bac_sc_maths.pdf" target="_blank">Read more</a>
                 </div>
 
-                
-                
+                <a class="prev" onclick="showPreviousbook()">&#10094;</a>
+                <a class="next" onclick="showNextbook()">&#10095;</a>
+
             </div>
             
         </div>
@@ -774,59 +812,6 @@
     }
 
     </script>
-
-<script>
-    const experienceContainer = document.querySelector(".experience");
-    const leftScroll = document.getElementById("left-scroll");
-    const rightScroll = document.getElementById("right-scroll");
-
-    const scrollDistance = 300; // Adjust this value to control the scroll distance
-
-    let scrollPosition = 0;
-
-    leftScroll.addEventListener("click", () => {
-      scrollPosition -= scrollDistance;
-      if (scrollPosition < 0) {
-        scrollPosition = 0;
-      }
-      experienceContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
-    });
-
-    rightScroll.addEventListener("click", () => {
-      scrollPosition += scrollDistance;
-      if (scrollPosition > experienceContainer.scrollWidth - experienceContainer.clientWidth) {
-        scrollPosition = experienceContainer.scrollWidth - experienceContainer.clientWidth;
-      }
-      experienceContainer.scrollTo({ left: scrollPosition, behavior: "smooth" });
-    });
-  </script>
-  <script>
-        const element = document.querySelector('.lang');
-        function getRandomDelay(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-
-        function applyRandomAnimationDelay(element) {
-            const minDelay = 1; 
-            const maxDelay = 14;
-            const randomDelay = getRandomDelay(minDelay, maxDelay);
-            element.style.animationDelay = `${randomDelay}s`;
-        }
-
-        elements.forEach(applyRandomAnimationDelay);
-
-        // Reapply a new random delay to each element when the animation iteration ends
-        elements.forEach(element => {
-            element.addEventListener('animationiteration', () => {
-                applyRandomAnimationDelay(element);
-            });
-        });
-    
-    
-
-
-  </script>
-
 
     <script src="particles-config.js"></script>
     <script src="slides.js"></script>

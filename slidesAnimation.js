@@ -77,3 +77,45 @@ function opentab(tabname){
     event.currentTarget.classList.add("active-link");
     document.getElementById(tabname).classList.add("active-tab");
 }
+
+
+// Books
+const booksElements = document.querySelectorAll('.book');
+let currentbook = 0;
+
+function showCurrentbook() {
+    // Hide all project elements
+    booksElements.forEach(project => {
+        project.style.display = 'none';
+    });
+
+    // Determine the number of elements to display based on screen width
+    const screenWidth = window.innerWidth;
+    let elementsToShow = 3; // Default to showing 3 elements
+
+    if (screenWidth < 750) {
+        elementsToShow = 1; // If screen width is less than 750px, show only 1 element
+    }
+
+    // Display the current book of projects
+    for (let i = currentbook; i < currentbook + elementsToShow; i++) {
+        const index = i % booksElements.length;
+        booksElements[index].style.display = 'block';
+    }
+}
+
+function showNextbook() {
+    currentbook++;
+    showCurrentbook();
+}
+
+function showPreviousbook() {
+    currentbook--;
+    if (currentbook < 0) {
+        currentbook = booksElements.length - 1;
+    }
+    showCurrentbook();
+}
+
+showCurrentbook();
+
