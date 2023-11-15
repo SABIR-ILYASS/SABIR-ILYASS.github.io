@@ -3,8 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="xfyWE_9pG-b3JRxKInklpF_tSiaJBs7n16PhzeY_9C4" />
-
     <title>SABIR Ilyass</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icon.png">
@@ -687,26 +685,40 @@
     <div id="intersts">
         <div class="container">
             <h1 class="title">Interests</h1>
-            <div class="my-pubs">
-                <div class="pub-group">
-                    <img src="images/fb-group.jpg" alt="">
-                    <div class="pub-group-desc">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="images/fb-group.jpg" alt="" class="card-img">
+
+                        </div>
+                    </div>
+                    <div class="card-content">
                         <h2>Mathematics, computer science, and physics olympiad group</h2>
                         <p>This is my own Facebook group in which I publish some Olympiad exercises, and I solve some of them in my free time.</p>
+                        <a href="https://www.facebook.com/groups/mathsinformaticsphysics" target="_blank">See the group</a>
                     </div>
-                    
-                    <a href="https://www.facebook.com/groups/mathsinformaticsphysics" target="_blank">See the group</a>
+
                 </div>
 
-                <div class="pub-group">
-                    <img src="images/euler_portrait.png" alt="">
-                    <div class="pub-group-desc">
+                <div class="card">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="images/euler_portrait.png" alt="" class="card-img">
+
+                        </div>
+                    </div>
+                    <div class="card-content">
                         <h2>Coding problems: Project Euler</h2>
                         <p>I solve mathematical/computer science problems from Project Euler. </p>
-                        </div>
-                    <a href="https://github.com/SABIR-ILYASS/EulerProject" target="_blank">See some problems</a>
+                        <a href="https://github.com/SABIR-ILYASS/EulerProject" target="_blank">See some problems</a>
+                    </div>
+
                 </div>
             </div>
+
             <p>Here is a non-exhaustive list of the articles I have written since 2018.</p>
             <div class="my_books">
                 <div class="book">
@@ -748,7 +760,7 @@
                     <h2>Olympiad - Inequalities</h2>
                     <a href="Books/mathematics olympiad.pdf" target="_blank">Read more</a>
                 </div>
-                
+
                 <div class="book">
                     <h2>La formule de Mertens</h2>
                     <a href="Books/mertens_formula.pdf" target="_blank">Read more</a>
@@ -815,6 +827,44 @@
     }
 
     </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!---
+    <script type="text/javascript">
+        $(document).on('scroll', function(){
+            $('.Exp.left').each(function() {
+                var offset = $(this).offset().top;
+                var scrollPosition = window.scrollY;
+                
+                if (scrollPosition >= offset - $(this).height() && scrollPosition <= offset -  $(this).height()/2) {
+                    // Apply the transformation with a delay of 0.5 seconds
+                    var translateValue = Math.max(50 + (scrollPosition - offset) / $(this).height() * 120, 0);
+                    setTimeout(function() {
+                        $(this).css({
+                            "transform": "translateX("+ translateValue + "%)"
+                        });
+                    }.bind(this), 500);
+                }
+            });
+
+            $('.Exp.right').each(function() {
+                var offset = $(this).offset().top;
+                var scrollPosition = window.scrollY;
+                
+                if (scrollPosition >= offset - $(this).height() && scrollPosition <= offset -  $(this).height()/2) {
+                    // Apply the transformation with a delay of 0.5 seconds
+                    var translateValue = Math.min(-50 - (scrollPosition - offset) / $(this).height() * 120, 0);
+                    setTimeout(function() {
+                        $(this).css({
+                            "transform": "translateX("+ translateValue + "%)"
+                        });
+                    }.bind(this), 200);
+                }
+            });
+        });
+    </script>
+-->
+    
+    
 
     <script src="particles-config.js"></script>
     <script src="slides.js"></script>

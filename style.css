@@ -782,11 +782,12 @@ form .btn2{
 .Exp.left{
     left: 0;
     margin-right: 55px;
+    /*transform: translateX(-50%);*/
 }
-
 .Exp.right{
     left: 100%;
     margin-left: 55px;
+    /*transform: translateX(50%);*/
 }
 
 .Exp img{
@@ -994,6 +995,8 @@ form .btn2{
     flex-wrap: wrap;
     gap: 50px 50px;
     padding: 50px 50px;
+    height: 500px;
+    margin-bottom: 100px;
 }
 
 .projects .proj{
@@ -1001,7 +1004,7 @@ form .btn2{
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 30%;
+    width: 28%;
     height: 350px;
     background: #fff;
     border-radius: 20px;
@@ -1098,7 +1101,7 @@ form .btn2{
 
 
 /*interests */
-.my-pubs {
+.card-wrapper {
     position: relative;
     padding: 40px 0;
     margin-top: 50px;
@@ -1106,62 +1109,95 @@ form .btn2{
     justify-content: space-around; 
     flex-wrap: wrap; 
     align-items: center;
+    height: 100%;
 }
-
-.my-pubs .pub-group {
-    display: flex;
-    flex: 0 1 calc(45% - 20px); 
-    flex-direction: column; 
-    background: #175673;
-    padding: 50px;
-    font-size: 13px;
-    font-weight: 300;
-    border-radius: 10px;
-    transition: background 0.5s, transform 0.5s;
-    height: 350px;
+.card{
+    width: 40%;
+    border-radius: 25px;
+    background-color: #FFF;
+    min-height: 400px;
 }
-
-
-.my-pubs .pub-group img{
+.card-image{
     position: relative;
-    top: -50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    height: 60%;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    background: #FFF;
+    padding: 3px;
+}
+
+.card-image .card-img{
+    height: 100%;
+    width: 100%;
     object-fit: cover;
-    border-radius: 1px;
+    border-radius: 50%;
+    border: 4px solid #517FE7;
+}
+.image-content, .card-content{
+    padding: 10px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.my-pubs .pub-group .pub-group-desc{
-    margin-top: -25%;
-
-}
-
-.my-pubs .pub-group .pub-group-desc h2{
+.card-content h2{
     font-size: 18px;
-    color: #3fefef;
-    margin-bottom: 20px;
+    font-weight: 500;
+    margin-left: 25px;
+    margin-right: 25px;
+    color: #172A46;
 }
 
-.my-pubs .pub-group p{
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-.my-pubs .pub-group a{
+.card-content p{
     font-size: 14px;
-    position:absolute;
-    display: inline-block;
-    padding: 15px 15px;
-    background: #23708A;
-    color: #fff;
-    font-weight: 200;
-    text-decoration: none;
-    border-radius: 10px;
-    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.55);
-    margin-top: 19%;
-    margin-left: 12%;
+    color: #175673;
+    text-align: center;
 }
+
+.image-content{
+    row-gap: 5px;
+    position: relative;
+    border-color: #3fefef;
+    padding: 25px 0;
+}
+
+.card-content a{
+    border-radius: 10px;
+    font-size: 16px;
+    color: #FFF;
+    padding: 8px 16px;
+    background-color: #175673;
+    margin: 14px;
+    text-decoration: none;
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #175673;
+    border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before, .overlay::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -40px;
+    height: 40px;
+    width: 40px;
+    background-color: #175673;
+}
+
+.overlay::after{
+    border-radius: 0 25px 0 0;
+    background-color: #FFF;
+}
+
+
+
 
 /* books */
 .my_books{
@@ -1552,6 +1588,11 @@ form .btn2{
     .projects .proj .proj-container a{
         font-weight: 400;
 
+    }
+
+    .card{
+        width: 90%;
+        margin-bottom: 15px;
     }
 
 
