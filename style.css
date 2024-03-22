@@ -882,7 +882,13 @@ form .btn2{
     width: 33%;
 }
 
+.edu span{
+    color: #23708A;
+}
 
+.edu h3 span{
+    color: #798D97;
+}
 
 .edu img{
     position: absolute;
