@@ -26,8 +26,8 @@ Welcome to the GitHub repository of my personal website. This site is designed t
 
 ## Languages and Tools Used:
 
-- HTML/CSS: For the structure and styling of the website.
-- JavaScript: For interactivity and dynamic functionality.
+- **HTML/CSS**: For the structure and styling of the website.
+- **JavaScript**: For interactivity and dynamic functionality.
 
 ## How to Contribute:
 
