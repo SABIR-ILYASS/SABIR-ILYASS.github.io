@@ -4,13 +4,13 @@ Welcome to the GitHub repository of my personal website. This site is designed t
 
 ## Sections of the site:
 
-1. **About Me**: A brief introduction about who I am and my professional goals.
+1. **About Me**: A brief introduction about who I am.
 
 2. **Experiences**: A list of my past and current professional experiences.
 
-3. **Education**: My degrees, certifications, and academic training.
+3. **Education**: My degrees.
 
-4. **Skills**: A list of my technical and professional skills.
+4. **Skills**: A list of my technical skills.
 
 5. **Projects**: A selection of my most significant projects, with links to their demos or GitHub repositories where applicable.
 
@@ -18,11 +18,11 @@ Welcome to the GitHub repository of my personal website. This site is designed t
 
 7. **Volunteer Experiences**: My volunteer experiences and community engagement.
 
-8. **Certificates**: My relevant professional certificates and accreditations.
+8. **Certificates**: My relevant professional certificates.
 
 9. **Interests**: My hobbies, passions, and interests outside of work.
 
-10. **Contact Me**: Ways to get in touch with me, such as my email address and social media profiles.
+10. **Contact Me**: Ways to get in touch with me.
 
 ## Languages and Tools Used:
 
