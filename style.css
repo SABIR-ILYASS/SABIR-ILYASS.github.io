@@ -462,7 +462,6 @@ nav ul li a:hover::after{
     display: flex;
     transition: transform 0.5s;
     height: 100%;
-
 }
 
 .layer{
@@ -804,7 +803,6 @@ form .btn2{
     margin-left: -50px;
 }
 
-
 .experience::after{
     content: "";
     position: absolute;
@@ -1008,6 +1006,7 @@ form .btn2{
     margin-bottom: 100px;
     justify-content: space-around; 
     height: 100%;
+    flex-wrap: wrap; 
 }
 
 .projects .proj{
@@ -1072,17 +1071,20 @@ form .btn2{
 
 .projects .proj:hover .proj-container p{
     display: block;
+    font-size: 1.75vh;
 }
 
 .projects .proj:hover .proj-container a{
     display: block;
+    position: absolute;
     border-radius: 10px;
     font-size: 80%;
     color: #FFF;
     padding: 4% 8%;
     background-color: #175673;
-    margin-top: 2%;
+    margin-top: 95%;
     text-decoration: none;
+    margin-top: 300px;
 }
 
 .projects .proj:hover .proj-container
@@ -1110,7 +1112,6 @@ form .btn2{
     margin-top: 10px;
 }
 
-
 .projects .proj .proj-container a{
     display: none;
 }
@@ -1118,8 +1119,6 @@ form .btn2{
 .projects .proj .proj-container a:hover{
     background-color: #23708A;
 }
-
-
 
 /*interests */
 .card-wrapper {
@@ -1528,7 +1527,7 @@ form .btn2{
     .edu img{
         position: absolute;
         top: -110px;
-        right: 35%;
+        right: 40%;
     }
 
 
@@ -1613,5 +1612,11 @@ form .btn2{
 
     .my_books .book{
         width: 95%;
+    }
+
+    .edu img{
+        position: absolute;
+        top: -110px;
+        right: 35%;
     }
 }

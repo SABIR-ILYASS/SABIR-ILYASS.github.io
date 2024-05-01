@@ -23,10 +23,12 @@ const projectElements = document.querySelectorAll(".proj");
 let currentGroup = 0;
 
 function showCurrentGroup() {
+    
     projectElements.forEach((element) => {
         element.style.display = "none";
+        element.style.zIndex = 0;
     });
-
+    
     let screenWidth = window.innerWidth;
     let projectsToShow = 3; 
 
@@ -41,6 +43,7 @@ function showCurrentGroup() {
         let index = i % projectElements.length;
         projectElements[index].style.display = "block";
     }
+
 }
 
 function showNextGroup() {
