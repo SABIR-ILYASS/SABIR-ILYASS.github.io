@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /admin/
+Disallow: /test/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sabir-ilyass.github.io/sitemap.xml

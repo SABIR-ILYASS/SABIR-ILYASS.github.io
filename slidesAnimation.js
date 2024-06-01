@@ -1,7 +1,6 @@
 const scriptURL = "https://script.google.com/macros/s/AKfycbxSNGDaBYX_UPTFALF3qhrK14Eb-_zMC1oQhgwIsv2Xm-I-BZnl6lU2_ks0WLfEWXIj/exec";
 const form = document.forms["submit-to-google-sheet"];
 const msg = document.getElementById("msg");
-
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -18,7 +17,6 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
-
 const projectElements = document.querySelectorAll(".proj");
 let currentGroup = 0;
 
@@ -45,12 +43,10 @@ function showCurrentGroup() {
     }
 
 }
-
 function showNextGroup() {
     currentGroup++;
     showCurrentGroup();
 }
-
 function showPreviousGroup() {
     currentGroup--;
     if (currentGroup < 0) {
@@ -58,15 +54,10 @@ function showPreviousGroup() {
     }
     showCurrentGroup();
 }
-
 showCurrentGroup();
-
 var sidemeu=document.getElementById("sidemenu");function openmenu(){sidemeu.style.right="50px"}function closemenu(){sidemeu.style.display="none"}var tablinks=document.getElementsByClassName("links"),tabcontents=document.getElementsByClassName("tab-contents");function opentab(e){for(tablink of tablinks)tablink.classList.remove("active-link");for(tabcontent of tabcontents)tabcontent.classList.remove("active-tab");event.currentTarget.classList.add("active-link"),document.getElementById(e).classList.add("active-tab")}
-
-
 const booksElements = document.querySelectorAll(".book");
 let currentbook = 0;
-
 function showCurrentbook() {
     booksElements.forEach(e => {
         e.style.display = "none";
@@ -88,15 +79,12 @@ function showCurrentbook() {
         booksElements[r].style.display = "block";
     }
 }
-
 function showNextbook() {
     currentbook++;
     showCurrentbook();
 }
-
 function showPreviousbook() {
     --currentbook < 0 && (currentbook = booksElements.length - 1);
     showCurrentbook();
 }
-
 showCurrentbook();
