@@ -3,7 +3,7 @@
   <img alt="TSE" src="https://github.com/SABIR-ILYASS/SABIR-ILYASS.github.io/blob/main/images/screen.png" width="90%">
 </p>
 
-Welcome to the repository for my personal portfolio website! You can visit the live site at [https://sabir-ilyass.github.io/](https://sabir-ilyass.github.io/).
+Welcome to the repository for my personal portfolio website! You can visit the live site at [https://sabir-ilyass.github.io](https://sabir-ilyass.github.io)
 
 ## About This Website
 This website provides a comprehensive overview of my:
